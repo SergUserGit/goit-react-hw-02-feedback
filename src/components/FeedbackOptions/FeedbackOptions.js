@@ -4,7 +4,7 @@ import css from './FeedbackOptions.module.css';
 class FeedbackOptions extends React.Component {
   render() {
     return (
-      <list className={css.optionsList}>
+      <ul className={css.optionsList}>
         <li>
           <button className={css.optionsButton} type="button">
             Good
@@ -20,7 +20,7 @@ class FeedbackOptions extends React.Component {
             Bad
           </button>
         </li>
-      </list>
+      </ul>
     );
   }
 }
