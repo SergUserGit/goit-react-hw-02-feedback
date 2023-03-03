@@ -4,7 +4,13 @@ import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 
 class Section extends React.Component {
   render() {
-    return '';
+    return (
+      <section>
+        <h1>{this.props.title}</h1>
+        <FeedbackOptions />
+        <Statistics />
+      </section>
+    );
   }
 }
 
