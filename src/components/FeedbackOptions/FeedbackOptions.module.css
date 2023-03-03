@@ -1,0 +1,11 @@
+.optionsList {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.optionsButton {
+  background-color: #FFF;
+  font-weight: 700;
+  cursor: pointer;
+}
