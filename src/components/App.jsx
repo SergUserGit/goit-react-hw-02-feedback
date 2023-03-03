@@ -1,5 +1,6 @@
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
+import Section from './Section/Section';
 
 export const App = () => {
   return (
@@ -13,8 +14,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <FeedbackOptions />
-      <Statistics />
+      <Section />
     </div>
   );
 };

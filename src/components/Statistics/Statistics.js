@@ -6,7 +6,7 @@ class Statistics extends React.Component {
     return (
       <div>
         <h2>Statistics</h2>
-        <ul>
+        <ul className={css.statisticList}>
           <li>
             <h3>Good: </h3>
             <span></span>
