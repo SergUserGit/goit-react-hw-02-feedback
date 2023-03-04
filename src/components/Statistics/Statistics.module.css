@@ -1,3 +1,9 @@
 .statisticList {
   list-style: none;
 }
+
+.statisticItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
