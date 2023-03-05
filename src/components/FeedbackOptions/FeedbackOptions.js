@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
 const FeedbackOptions = function ({
@@ -36,6 +37,12 @@ const FeedbackOptions = function ({
       </li>
     </ul>
   );
+};
+
+FeedbackOptions.propTypes = {
+  onGoodFeedBack: PropTypes.func.isRequired,
+  onNeutralFeedBack: PropTypes.func.isRequired,
+  onBadFeedBack: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;
