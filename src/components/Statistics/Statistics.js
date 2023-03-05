@@ -1,6 +1,12 @@
 import css from './Statistics.module.css';
 
-const Statistics = function ({ good, neutral, bad }) {
+const Statistics = function ({
+  good,
+  neutral,
+  bad,
+  totalFeedback,
+  countPositiveFeedbackPercentage,
+}) {
   return (
     <>
       <h2>Statistics</h2>
@@ -17,13 +23,13 @@ const Statistics = function ({ good, neutral, bad }) {
           <h3>Bad: </h3>
           <span>{bad}</span>
         </li>
-        <li>
+        <li className={css.statisticItem}>
           <h3>Total: </h3>
-          <span></span>
+          <span>{totalFeedback}</span>
         </li>
-        <li>
+        <li className={css.statisticItem}>
           <h3>Positive feedback: </h3>
-          <span></span>
+          <span>{countPositiveFeedbackPercentage}</span>
         </li>
       </ul>
     </>

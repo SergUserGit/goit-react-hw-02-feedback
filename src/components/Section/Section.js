@@ -21,6 +21,18 @@ class Section extends React.Component {
     this.setState(prevState => ({ bad: prevState.bad + 1 }));
   };
 
+  countTotalFeedback = () => {
+    return this.state.good + this.state.neutral + this.state.bad;
+  };
+
+  countPositiveFeedbackPercentage = () => {
+    const percentage =
+      this.countTotalFeedback() === 0
+        ? 0
+        : Math.floor((this.state.good / this.countTotalFeedback()) * 100);
+    return String(percentage) + '%';
+  };
+
   render() {
     return (
       <section>
@@ -34,6 +46,8 @@ class Section extends React.Component {
           good={this.state.good}
           neutral={this.state.neutral}
           bad={this.state.bad}
+          totalFeedback={this.countTotalFeedback()}
+          countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage()}
         />
       </section>
     );
