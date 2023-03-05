@@ -1,4 +1,6 @@
 .statisticList {
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: none;
 }
 
@@ -6,4 +8,17 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.statisticTitle {
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.statisticType {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 40px;
 }

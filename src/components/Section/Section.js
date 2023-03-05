@@ -2,6 +2,8 @@ import React from 'react';
 import Statistics from 'components/Statistics/Statistics';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Notification from 'components/Notification/Notification';
+import PropTypes from 'prop-types';
+import css from './Section.module.css';
 
 class Section extends React.Component {
   state = {
@@ -37,7 +39,7 @@ class Section extends React.Component {
   render() {
     return (
       <section>
-        <h1>{this.props.title}</h1>
+        <h1 className={css.sectionTitle}>{this.props.title}</h1>
         <FeedbackOptions
           onGoodFeedBack={this.goodFeedBack}
           onNeutralFeedBack={this.neutralFeedBack}
@@ -61,5 +63,9 @@ class Section extends React.Component {
     );
   }
 }
+
+Section.propTypes = {
+  title: PropTypes.string,
+};
 
 export default Section;
