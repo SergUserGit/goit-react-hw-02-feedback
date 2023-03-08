@@ -7,29 +7,35 @@ const Statistics = function ({
   bad,
   totalFeedback,
   countPositiveFeedbackPercentage,
+  headerStatistics,
+  headerGood,
+  headerNeutral,
+  headerBad,
+  headerTotal,
+  headerPositive,
 }) {
   return (
     <>
-      <h2 className={css.statisticTitle}>Statistics</h2>
+      <h2 className={css.statisticTitle}>{headerStatistics}</h2>
       <ul className={css.statisticList}>
         <li className={css.statisticItem}>
-          <h3 className={css.statisticType}>Good: </h3>
+          <h3 className={css.statisticType}>{headerGood}</h3>
           <span>{good}</span>
         </li>
         <li className={css.statisticItem}>
-          <h3 className={css.statisticType}>Neutral: </h3>
+          <h3 className={css.statisticType}>{headerNeutral}</h3>
           <span>{neutral}</span>
         </li>
         <li className={css.statisticItem}>
-          <h3 className={css.statisticType}>Bad: </h3>
+          <h3 className={css.statisticType}>{headerBad}</h3>
           <span>{bad}</span>
         </li>
         <li className={css.statisticItem}>
-          <h3 className={css.statisticType}>Total: </h3>
+          <h3 className={css.statisticType}>{headerTotal}</h3>
           <span>{totalFeedback}</span>
         </li>
         <li className={css.statisticItem}>
-          <h3 className={css.statisticType}>Positive feedback: </h3>
+          <h3 className={css.statisticType}>{headerPositive}</h3>
           <span>{countPositiveFeedbackPercentage}</span>
         </li>
       </ul>
@@ -43,6 +49,12 @@ Statistics.propTypes = {
   bad: PropTypes.number,
   totalFeedback: PropTypes.number,
   countPositiveFeedbackPercentage: PropTypes.string,
+  headerStatistics: PropTypes.string,
+  headerGood: PropTypes.string,
+  headerNeutral: PropTypes.string,
+  headerBad: PropTypes.string,
+  headerTotal: PropTypes.string,
+  headerPositive: PropTypes.string,
 };
 
 export default Statistics;

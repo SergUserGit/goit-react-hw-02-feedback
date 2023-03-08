@@ -5,6 +5,9 @@ const FeedbackOptions = function ({
   onGoodFeedBack,
   onNeutralFeedBack,
   onBadFeedBack,
+  labelGood,
+  labelNeutral,
+  labelBad,
 }) {
   return (
     <ul className={css.optionsList}>
@@ -14,7 +17,7 @@ const FeedbackOptions = function ({
           type="button"
           onClick={onGoodFeedBack}
         >
-          Good
+          {labelGood}
         </button>
       </li>
       <li>
@@ -23,7 +26,7 @@ const FeedbackOptions = function ({
           type="button"
           onClick={onNeutralFeedBack}
         >
-          Neutral
+          {labelNeutral}
         </button>
       </li>
       <li>
@@ -32,7 +35,7 @@ const FeedbackOptions = function ({
           type="button"
           onClick={onBadFeedBack}
         >
-          Bad
+          {labelBad}
         </button>
       </li>
     </ul>
@@ -43,6 +46,9 @@ FeedbackOptions.propTypes = {
   onGoodFeedBack: PropTypes.func.isRequired,
   onNeutralFeedBack: PropTypes.func.isRequired,
   onBadFeedBack: PropTypes.func.isRequired,
+  labelGood: PropTypes.string,
+  labelNeutral: PropTypes.string,
+  labelBad: PropTypes.string,
 };
 
 export default FeedbackOptions;

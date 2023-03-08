@@ -44,10 +44,13 @@ class Section extends React.Component {
           onGoodFeedBack={this.goodFeedBack}
           onNeutralFeedBack={this.neutralFeedBack}
           onBadFeedBack={this.badFeedBack}
+          labelGood="Good"
+          labelNeutral="Neutral"
+          labelBad="Bad"
         />
 
         {this.countTotalFeedback() === 0 && (
-          <Notification message="No feedback given" />
+          <Notification header="Statistics" message="No feedback given" />
         )}
 
         {this.countTotalFeedback() > 0 && (
@@ -57,6 +60,12 @@ class Section extends React.Component {
             bad={this.state.bad}
             totalFeedback={this.countTotalFeedback()}
             countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage()}
+            headerStatistics="Statistics"
+            headerGood="Good:"
+            headerNeutral="Neutral:"
+            headerBad="Bad:"
+            headerTotal="Total:"
+            headerPositive="Positive feedback:"
           />
         )}
       </section>
